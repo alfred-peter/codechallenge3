@@ -1,4 +1,5 @@
-// Your code here
+// // Write your code here
+
 function moviesArray(){
     fetch(" http://localhost:3000/films")
     .then(res=>res.json())
@@ -42,7 +43,7 @@ function dispalyMovieOne(data){
     img.src=data.poster
     let btn = document.getElementById("buy-ticket");
     btn.removeEventListener("click", handleTicket);
-    btn.addEventListener("click", () => handleTicket(span2,data))
+    btn.addEventListener("click", () => handleTicket(span2,data));
 
 }
 
@@ -51,7 +52,7 @@ function handleClick(data){
     let h1=document.getElementById("title")
     h1.textContent=data.title
     let div=document.getElementById("runtime")
-    div.textContent=`${data.runtime }minutes`
+    div.textContent=`${data.runtime }  minutes`
     let p=document.getElementById("film-info")
     p.textContent=data.description
     let span=document.getElementById("showtime")
@@ -62,7 +63,7 @@ function handleClick(data){
     img.src=data.poster
     let btn = document.getElementById("buy-ticket");
     btn.removeEventListener("click", handleTicket);
-    btn.addEventListener("click", () => handleTicket(span2, data))
+    btn.addEventListener("click", () => handleTicket(span2, data));
 
 }
 
